@@ -1,0 +1,294 @@
+.supportContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.supportContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.3rem;
+  background: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde);
+  background-size: 200% auto;
+  animation: gradientFlow 3s linear infinite;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.supportHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.supportHeader h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.supportHeader p {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aboutImage {
+  flex: 1;
+}
+
+.cryptoContainer {
+  position: relative;
+  width: 100%;
+  height: 300px; /* ارتفاع بیشتر برای نمایش بهتر */
+  background: rgba(0, 219, 222, 0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
+
+.coinAnimation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.coin {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: float 4s infinite ease-in-out;
+  filter: drop-shadow(0 0 8px currentColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.coin:hover {
+  opacity: 1;
+  transform: scale(1.2) !important;
+  z-index: 10;
+}
+
+/* انیمیشن پیشرفته با حرکت در سه بعد */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(0) rotateY(0) scale(var(--scale));
+  }
+  25% {
+    transform: translateY(-20px) rotateX(10deg) rotateY(5deg)
+      scale(var(--scale));
+  }
+  50% {
+    transform: translateY(-10px) rotateX(-5deg) rotateY(10deg)
+      scale(var(--scale));
+  }
+  75% {
+    transform: translateY(-15px) rotateX(5deg) rotateY(-5deg)
+      scale(var(--scale));
+  }
+}
+
+/* استایل‌های خاص برای برخی ارزها */
+.bitcoin {
+  --scale: 1.1;
+}
+.ethereum {
+  --scale: 1;
+}
+.solana {
+  --scale: 0.9;
+}
+.binance {
+  --scale: 1.05;
+}
+
+.aboutText {
+  flex: 1;
+}
+
+.aboutText h2 {
+  font-size: 1.5rem;
+  color: #00dbde;
+  margin-bottom: 1rem;
+}
+
+.aboutText p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.valuesSection h2,
+.teamSection h2,
+.ctaSection h2 {
+  font-size: 1.5rem;
+  color: #00dbde;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.valueCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.valueIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.valueCard h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.valueCard p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.memberPhoto {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #fc00ff 0%, #00dbde 100%);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+}
+
+.teamMember h3 {
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.teamMember p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 219, 222, 0.1);
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 219, 222, 0.3);
+}
+
+.ctaSection p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  padding: 0.75rem 2rem;
+  background: #00dbde;
+  color: #16213e;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 219, 222, 0.4);
+}
+
+@media (max-width: 768px) {
+  .supportContainer {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .aboutSection {
+    flex-direction: column;
+  }
+
+  .valuesGrid,
+  .teamGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .valuesGrid,
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaSection p {
+    max-width: 100%;
+  }
+}

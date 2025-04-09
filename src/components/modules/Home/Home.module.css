@@ -1,0 +1,72 @@
+/* Home.module.css */
+
+.hero_section {
+  background: linear-gradient(to right, #070a11, #173ca3);
+  color: white;
+  padding: 5rem 0;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+
+  overflow: hidden;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.hero_title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero_desc {
+  font-size: 1.25rem;
+  max-width: 48rem;
+  margin: 0 auto 2rem auto;
+}
+
+.hero_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn_primary {
+  background: linear-gradient(90deg, #fc44ff, #0059de);
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  transition: 0.3s all;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+.btn_primary:hover {
+  background: linear-gradient(20deg,  #fc00ff,#0059de);
+}
+
+.btn_secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.btn_secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.mobails {
+  margin: auto;
+}

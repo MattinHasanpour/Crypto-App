@@ -1,0 +1,247 @@
+.exchangeContainer {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.exchangeContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.3rem;
+  background: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde);
+  background-size: 200% auto;
+  animation: gradientFlow 3s linear infinite;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.exchangeHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.exchangeHeader h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.exchangeHeader p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+.exchangeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.currencyInput {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(30, 30, 47, 0.5);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.currencySelect {
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.currencySelect:focus {
+  outline: none;
+  border-color: #00dbde;
+}
+
+.amountInput {
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.amountInput:focus {
+  outline: none;
+  border-color: #00dbde;
+}
+
+.resultInput {
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.swapButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #00dbde, #fc00ff);
+  border-radius: 50%;
+  margin: -1rem auto;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.swapButton:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+.rateInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  justify-content: center;
+}
+
+.submitButton {
+  padding: 1rem;
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  color: white;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.submitButton:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.quickExchange {
+  background: rgba(30, 30, 47, 0.5);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.quickExchange h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.quickOptions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.quickOptions button {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.quickOptions button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .exchangeContainer {
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+  
+  .currencyInput {
+    padding: 1rem;
+  }
+  
+  .quickOptions {
+    flex-direction: column;
+  }
+  
+  .quickOptions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .exchangeContainer {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .exchangeHeader h2 {
+    font-size: 1.8rem;
+  }
+  
+  .swapButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

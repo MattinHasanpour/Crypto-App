@@ -1,27 +1,22 @@
 import styles from "./layouts.module.css";
 
-import { FaExchangeAlt, FaWallet, FaChartLine, FaCheck } from 'react-icons/fa';
 
-import Header from "./Header";
-import Footer from "./Footer";
-import Services from "./Services";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
+import Services from "../components/modules/servicesPage/Services";
 
 const Layouts = ({ children }) => {
   return (
     <div className={`${styles.container} ${styles.darkMode}`}>
       {/* هدر */}
-      <header className={styles.header}>
-        <Header className={styles.headerContent} />
-      </header>
+      <Header className={styles.headerContent} />
 
       {/* محتوای اصلی */}
       <main className={styles.main}>
         <div className={styles.dynamicContent}>{children}</div>
 
-       <Services />
       </main>
 
-      {/* فوتر */}
       <Footer />
     </div>
   );

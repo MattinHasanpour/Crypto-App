@@ -1,0 +1,281 @@
+.profileContainer {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.profileContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.3rem;
+  background: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde);
+  background-size: 200% auto;
+  animation: gradientFlow 3s linear infinite;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.profileHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profileHeader h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.profileHeader p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+.profileContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .profileContent {
+    flex-direction: row;
+  }
+}
+
+/* استایل‌های بخش آواتار */
+.avatarSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(30, 30, 47, 0.5);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(0, 219, 222, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 2px solid #00dbde;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarIcon {
+  font-size: 3rem;
+  color: #00dbde;
+}
+
+.uploadContainer {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.uploadBtn {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.uploadBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.avatarSection h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatarSection p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* بقیه استایل‌ها مانند قبل */
+.infoSection {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoCard {
+  background: rgba(30, 30, 47, 0.5);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  flex: 1;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoIcon {
+  font-size: 1.5rem;
+  color: #00dbde;
+  min-width: 30px;
+}
+
+.infoItem div {
+  flex: 1;
+}
+
+.infoItem label {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.3rem;
+}
+
+.infoItem p {
+  font-size: 1.1rem;
+}
+
+.editInput {
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.editInput:focus {
+  outline: none;
+  border-color: #00dbde;
+}
+
+.actionButtons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.editBtn, .saveBtn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: none;
+}
+
+.editBtn {
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  color: white;
+}
+
+.saveBtn {
+  background: linear-gradient(90deg, #00e676, #00b0ff);
+  color: white;
+}
+
+.editBtn:hover, .saveBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 1.5rem;
+  }
+  
+  .avatarSection {
+    padding: 1.5rem;
+  }
+  
+  .infoCard {
+    padding: 1rem;
+  }
+  
+  .infoItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .actionButtons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileContainer {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .profileHeader h2 {
+    font-size: 1.8rem;
+  }
+  
+  .editBtn, .saveBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,292 @@
+.walletContainer {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 1.2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .walletContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.3rem;
+    background: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde);
+    background-size: 200% auto;
+    animation: gradientFlow 3s linear infinite;
+    border-radius: 1.2rem 1.2rem 0 0;
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+  
+  .walletHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+  }
+  
+  .walletHeader h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .walletHeader p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+  }
+  
+  .walletTabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .walletTab {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+  }
+  
+  .walletTab:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .walletTab.active {
+    background:#00aade;
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 0.5rem 1rem rgba(0, 219, 222, 0.3);
+  }
+  
+  .walletActions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .walletActionBtn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .walletActionBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .balancesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .balanceCard {
+    background: rgba(30, 30, 47, 0.7);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .balanceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .balanceCurrency {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .balanceAmount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .balanceValue {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .totalBalance {
+    grid-column: 1 / -1;
+    background: rgba(0, 219, 222, 0.1);
+    border: 1px solid rgba(0, 219, 222, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .transactionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .transactionItem {
+    display: flex;
+    align-items: center;
+    background: rgba(30, 30, 47, 0.7);
+    border-radius: 0.8rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+  }
+  
+  .transactionItem:hover {
+    background: rgba(40, 40, 60, 0.8);
+    transform: translateX(5px);
+  }
+  
+  .transactionIcon {
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .transactionIcon .success {
+    color: #00e676;
+  }
+  
+  .transactionIcon .warning {
+    color: #ff9100;
+  }
+  
+  .transactionIcon .info {
+    color: #00b0ff;
+  }
+  
+  .transactionDetails {
+    flex: 1;
+  }
+  
+  .transactionType {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 0.3rem;
+  }
+  
+  .transactionAmount {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+  
+  .transactionDate {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .transactionStatus {
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .transactionStatus.completed {
+    background: rgba(0, 200, 83, 0.2);
+    color: #00e676;
+  }
+  
+  .transactionStatus.pending {
+    background: rgba(255, 171, 0, 0.2);
+    color: #ffc400;
+  }
+  
+  .transactionStatus.failed {
+    background: rgba(255, 55, 55, 0.2);
+    color: #ff5252;
+  }
+  
+  @media (max-width: 768px) {
+    .walletContainer {
+      padding: 1rem;
+      margin: 1rem;
+    }
+    
+    .balancesGrid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .walletActions {
+      gap: 0.5rem;
+    }
+    
+    .walletActionBtn {
+      padding: 0.6rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .balancesGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .walletTabs {
+      flex-direction: column;
+    }
+    
+    .transactionItem {
+      padding: 1rem;
+    }
+    
+    .transactionIcon {
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+  }
