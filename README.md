@@ -36,7 +36,7 @@ Follow these steps to set up the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/cryptok.git
+git clone https://github.com/MattinHasanpour/cryptok.git
 
 # Go to the project directory
 cd cryptok
