@@ -39,13 +39,13 @@ Follow these steps to set up the project locally:
 git clone https://github.com/MattinHasanpour//Crypto-App.git
 
 # Go to the project directory
-cd cryptok
+cd Crypto-App
 
 # Install dependencies
 npm install
 
 # Start the development server
-npm start
+npm run dev
 ```
 
 ---
